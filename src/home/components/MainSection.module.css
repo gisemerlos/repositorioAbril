@@ -1,0 +1,102 @@
+.BoxGridTemplateAreas {
+  display: grid;
+}
+
+@media only screen and (max-width: 600px) {
+  .BoxGridTemplateAreas {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "."
+      "."
+      "title"
+      "subtitle"
+      "btn";
+    column-gap: 0;
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .BoxGridTemplateAreas {
+    margin-top: 64px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      ". img"
+      "title img"
+      "subtitle img"
+      "btn img"
+      ". img";
+    column-gap: 2rem;
+    height: 92vh;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .BoxGridTemplateAreas {
+    margin-top: 0;
+  }
+}
+
+.BoxTitle {
+  grid-area: title;
+  align-self: flex-end;
+}
+
+@media only screen and (max-width: 600px) {
+  .BoxTitle {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .BoxTitle {
+    text-align: left;
+  }
+}
+
+.TitleH3 {
+  font-weight: bold;
+}
+
+.BoxSubtitle {
+  grid-area: subtitle;
+  align-self: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .BoxSubtitle {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .BoxSubtitle {
+    text-align: left;
+  }
+}
+
+.BoxButton {
+  grid-area: btn;
+  align-self: flex-start;
+}
+
+@media only screen and (max-width: 600px) {
+  .BoxButton {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .BoxButton {
+    text-align: left;
+  }
+}
+
+.BoxImage {
+  grid-area: img;
+  background-image: url("https://picsum.photos/1200/800");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
